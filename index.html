@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Raleway:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="hangmanCategories.css">
+    <script type="module" src="hangmanCategories.js" defer></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+    <main id="backDiv">
+        <div id="mainDiv">
+            <div id="categories">
+                <p id="choose">Please Choose a Category</p>
+                <button class="category" value="nationalParks">National Parks</button>
+                <button class="category" value="words">Words From the Dictionary</button>
+                <button class="category" value="animals">Animals</button>
+                <button class="category" value="city">US cities</button>
+                <button class="category" value="country">Countries</button>
+            </div>
+
+            <div id="wordDiv">
+                <p id="wordLength">Choose word length:</p>
+                <button class="wordLen">3</button>
+                <button class="wordLen">4</button>
+                <button class="wordLen">5</button>
+                <button class="wordLen">6</button>
+                <button class="wordLen">7</button>
+            </div>
+
+            <p id="word"></p>
+            <div id="alphabet">
+                <button class="letters" id="a">a</button>
+                <button class="letters" id="b">b</button>
+                <button class="letters" id="c">c</button>
+                <button class="letters" id="d">d</button>
+                <button class="letters" id="e">e</button>
+                <button class="letters" id="f">f</button>
+                <button class="letters" id="g">g</button>
+                <button class="letters" id="h">h</button>
+                <button class="letters" id="i">i</button>
+                <button class="letters" id="j">j</button>
+                <button class="letters" id="k">k</button>
+                <button class="letters" id="l">l</button>
+                <button class="letters" id="m">m</button>
+                <button class="letters" id="n">n</button>
+                <button class="letters" id="o">o</button>
+                <button class="letters" id="p">p</button>
+                <button class="letters" id="q">q</button>
+                <button class="letters" id="r">r</button>
+                <button class="letters" id="s">s</button>
+                <button class="letters" id="t">t</button>
+                <button class="letters" id="u">u</button>
+                <button class="letters" id="v">v</button>
+                <button class="letters" id="w">w</button>
+                <button class="letters" id="x">x</button>
+                <button class="letters" id="y">y</button>
+                <button class="letters" id="z">z</button>
+                <div id="guesses"></div>
+
+                <p id="definition"></p>
+            </div>
+            <p id="output"></p>
+            <button id="hint">Get a hint</button>
+        </div>
+        <div class="buttons">
+            <button id="reset" onclick="location.reload()">Start Over</button>
+            <!-- <button id="back" onclick="history.back()">Back</button> -->
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+:root {
+    --color-black: #000;
+    --color-primary: #F9F5EB;
+    --color-secondary: #E4DCCF;
+    --color-salmon: #EA5455;
+    --color-blue: #002B5B;
+    /* font-family: 'Caveat', cursive;
+font-family: 'Raleway', sans-serif; */
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--color-blue);
+    font-size: 1.7rem;
+}
+
+#backDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 5rem;
+}
+
+#mainDiv {
+    width: 90%;
+    background-color: var(--color-primary);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 3rem;
+    max-width: 46rem;
+}
+
+#alphabet,
+#wordDiv,
+#hint {
+    display: none;
+}
+
+#choose {
+    text-align: center;
+    margin: .5rem 0 1.5rem;
+}
+
+button {
+    padding: 1rem;
+    border-radius: 100rem;
+    margin: .5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-salmon);
+    cursor: pointer;
+}
+
+#categories {
+    display: flex;
+    flex-direction: column;
+}
+
+#wordDiv {
+    flex-direction: column;
+}
+
+#word {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Caveat', cursive;
+    padding-bottom: 2rem;
+}
+
+#alphabet {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.letters {
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+#guesses {
+    margin: 2rem auto;
+}
+
+#hint {
+    margin: 2rem auto;
+}
+
+#definition {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+
+blockquote {
+    padding: 1rem;
+}
+
+#output {
+    line-height: 3rem;
+}
+
+
+
+
+
+
+
+/* body * {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#backDiv {
+    background-image: linear-gradient(to bottom right, rgb(44, 124, 159), rgb(12, 81, 109), black);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+button {
+    color: black;
+}
+
+#mainDiv {
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    height: 80vh;
+    width: 70vw;
+    box-sizing: border-box;
+    padding: 15px 50px;
+    border-radius: 2rem 2rem 1rem 1rem;
+}
+
+#categories {
+    height: 90%;
+    overflow: auto;
+}
+
+.category {
+    flex: 1 1;
+    max-height: 5rem;
+}
+
+#choose,
+#wordLength {
+    width: 100%;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+#alphabet {
+    display: none;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 80%;
+}
+
+.category {
+    flex: 1 1;
+    max-width: 20%;
+}
+
+.letters {
+    flex: 1 1;
+    max-width: 10%;
+}
+
+.letters,
+#hint,
+.category,
+.wordLen {
+    padding: 15px 25px;
+    margin: 1rem;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: transform 200ms;
+}
+
+button:hover {
+    border: 2px solid #2c7c9f;
+    box-shadow: 0 0.5em 0.5em -0.4em #0c2f3e;
+    transform: translateY(-0.25em);
+}
+
+#guesses {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+button:disabled {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+#wordDiv {
+    display: none;
+}
+
+#word {
+    margin-top: 10px;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    width: 100%;
+}
+
+#hint {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#reset,
+#back {
+    position: fixed;
+    bottom: 1%;
+    padding: .8rem;
+    border-radius: 1.5rem;
+}
+
+#definition {
+    width: 100%;
+    font-size: 1.2em;
+}
+
+#output {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+#reset {
+    left: 10px;
+}
+
+#back {
+    right: 10px;
+}
+
+
+
+@media (max-width: 850px) {
+    #mainDiv {
+        margin: 0;
+        padding: 0;
+        max-height: 80%;
+        position: absolute;
+        top: 5%;
+    }
+
+    .category {
+        padding: 2% 20%;
+        margin: 5px;
+        border-radius: 20px;
+        border: none;
+        font-size: .8rem;
+        width: 40%;
+    }
+
+    .letters,
+    #hint,
+    #reset,
+    #back {
+        padding: 2% 10%;
+        margin: 2%;
+    }
+
+    #word {
+        font-size: 1rem;
+        padding: 3%;
+        letter-spacing: .2rem;
+        display: block;
+        overflow: auto;
+
+    }
+
+    #hint {
+        position: fixed;
+        top: 1%;
+        right: 1%;
+        font-size: .8rem;
+    }
+
+    #guesses {
+        font-size: 1rem;
+        margin: 2%;
+        padding: 2%;
+    }
+
+    #definition {
+        font-size: 1rem;
+    }
+
+    #choose {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+    #output {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #mainDiv {
+        padding: 0;
+    }
+} */
